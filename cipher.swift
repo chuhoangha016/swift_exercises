@@ -9,7 +9,11 @@ func pos (_ list: [Character],_ letter: Character,_ k: Int) -> Int {
 			break
 		}
 	}
-	return (x + 2*k) % 52
+    let val = (x+2*k)%52
+    if val >= 0 {
+        return val }
+    else {
+        return (52+val) }
 }
 
 func all (_ input: String,_ k:Int )  {
